@@ -11,9 +11,9 @@ namespace Entropedia
         public int year = 2020;
 
         [Range(1, 12)]
-        public int month = 6;
+        public int month = 2;
         [Range(0, 31)]
-        public int day = 22;
+        public int day = 4;
 
         private void OnValidate()
         {

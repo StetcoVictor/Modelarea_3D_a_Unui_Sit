@@ -44,15 +44,15 @@ namespace Entropedia
         }
 
         public void SetLocation(float longitude, float latitude){
-          this.longitude = longitude;
-          this.latitude = latitude;
+            this.longitude = longitude;
+            this.latitude = latitude;
         }
 
         public void SetDate(DateTime dateTime){
-         this.hour = dateTime.Hour;
-         this.minutes = dateTime.Minute;
-         this.date = dateTime.Date;
-         OnValidate();
+            this.hour = dateTime.Hour;
+            this.minutes = dateTime.Minute;
+            this.date = dateTime.Date;
+            OnValidate();
         }
 
         public void SetUpdateSteps(int i) {
@@ -66,6 +66,36 @@ namespace Entropedia
         public float GetTimeSpeed()
         {
             return timeSpeed;
+        }
+
+        public int getYear()
+        {
+            return time.Year;
+        }
+
+        public int getMonth()
+        {
+            return time.Month;
+        }
+
+        public int getDay()
+        {
+            return time.Day;
+        }
+
+        public int getHour()
+        {
+            return hour;
+        }
+
+        public int getMinutes()
+        {
+            return minutes;
+        }
+
+        public int getSeconds()
+        {
+            return time.Second;
         }
 
         private void Awake()
@@ -93,6 +123,17 @@ namespace Entropedia
             frameStep = (frameStep + 1) % frameSteps;
 
 
+            //StellariumServer.Instance.MainService.SetTime(CustomDateTime.ToJulianDay(new CustomDateTime(
+            //    time.Year,
+            //    time.Month,
+            //    time.Day,
+            //    hour,
+            //    minutes,
+            //    1,
+            //    (CustomDateTime.Era)(time.Year) < 0 ? 0 : 1)
+            //    )),
+            //    0f
+           // );
         }
 
         void SetPosition()
