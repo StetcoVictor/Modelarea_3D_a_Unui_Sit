@@ -85,12 +85,12 @@ namespace Entropedia
 
         public int getHour()
         {
-            return hour;
+            return time.Hour;
         }
 
         public int getMinutes()
         {
-            return minutes;
+            return time.Minute;
         }
 
         public int getSeconds()
@@ -121,19 +121,6 @@ namespace Entropedia
                 SetPosition();
             }
             frameStep = (frameStep + 1) % frameSteps;
-
-
-            //StellariumServer.Instance.MainService.SetTime(CustomDateTime.ToJulianDay(new CustomDateTime(
-            //    time.Year,
-            //    time.Month,
-            //    time.Day,
-            //    hour,
-            //    minutes,
-            //    1,
-            //    (CustomDateTime.Era)(time.Year) < 0 ? 0 : 1)
-            //    )),
-            //    0f
-           // );
         }
 
         void SetPosition()

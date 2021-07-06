@@ -14,7 +14,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayAction()
     {
-        System.Diagnostics.Process.Start("C:/Users/Victor/Desktop/Stellarium.bat");
+        string m_Path = Application.dataPath;
+        System.Diagnostics.Process.Start(m_Path + "/Resources/StellariumStart.bat");
         Invoke("Action", 10.0f);
     }
 
